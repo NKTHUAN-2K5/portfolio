@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "company": "CÔNG TY TNHHNTV ACC EDU",
+    "position": "Founder & COO",
+    "startDate": "2025",
+    "endDate": "Hiện tại",
+    "description": "Giám sát hoạt động vận hành hằng ngày; điều phối quy trình nội bộ; phối hợp giữa các bộ phận. Quản lý tiến độ và chất lượng của core team: Product Manager, Fullstack, Data Analyst. Xây dựng và triển khai dashboard báo cáo dữ liệu khách hàng; phân tích hành vi người dùng; tối ưu hóa hiệu suất hệ thống."
+  },
+  {
+    "id": 2,
+    "company": "CÔNG TY TNHHNTV ACC SOLUTION",
+    "position": "Founder & COO",
+    "startDate": "2025",
+    "endDate": "Hiện tại",
+    "description": "Giám sát toàn bộ hoạt động vận hành hằng ngày của công ty; điều phối các quy trình nội bộ; phối hợp giữa các bộ phận kỹ thuật và kinh doanh. Phối hợp Product Manager trong quản lý vòng đời sản phẩm; định hướng chiến lược phát triển sản phẩm."
+  },
+  {
+    "id": 3,
+    "company": "MG TEETH VIỆT NAM",
+    "position": "Product Manager",
+    "startDate": "2024",
+    "endDate": "2025",
+    "description": "Điều phối đội ngũ phát triển; thu thập và phân tích yêu cầu khách hàng; đảm bảo tiến độ và chất lượng dự án. Phối hợp kỹ thuật và marketing để tối ưu chiến lược; xây dựng dashboard và báo cáo dữ liệu; đánh giá hiệu quả hoạt động sản phẩm."
+  },
+  {
+    "id": 4,
+    "company": "FREELANCE",
+    "position": "Frontend / Backend Developer",
+    "startDate": "2024",
+    "endDate": "2025",
+    "description": "Phát triển website theo yêu cầu của khách hàng; xây dựng giao diện bằng ReactJS; thiết kế và phát triển backend bằng NodeJS, Express; tích hợp API; đảm bảo hiệu năng và bảo mật hệ thống."
+  },
+  {
+    "id": 5,
+    "company": "MCDONALD'S",
+    "position": "Nhân viên vận hành",
+    "startDate": "2024",
+    "endDate": "2024",
+    "description": "Tiếp nhận và chăm sóc khách hàng; vận hành các khâu trong quy trình phục vụ; làm việc nhóm trong môi trường áp lực cao."
+  },
+  {
+    "id": 6,
+    "company": "HUFENG (BẠCH LINH 3)",
+    "position": "Công nhân sản xuất",
+    "startDate": "2023",
+    "endDate": "2024",
+    "description": "Làm việc trong dây chuyền sản xuất; đảm bảo tiến độ và chất lượng sản phẩm; tuân thủ quy trình an toàn lao động; làm việc nhóm hiệu quả."
+  },
+  {
+    "id": 7,
+    "company": "ACCEDU AI (Dự án)",
+    "position": "Đóng góp thiết kế & phát triển",
+    "startDate": "2024",
+    "endDate": "2025",
+    "description": "Nền tảng học tập AI. Công nghệ: AI (LLM, NLP), ReactJS, NodeJS. Chức năng: Cá nhân hóa nội dung học, Web Flow, giao diện người dùng thân thiện. Vai trò: Đóng góp vào thiết kế hệ thống, phát triển webapp."
+  }
+]

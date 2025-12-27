@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "JavaScript",
+    "level": 90,
+    "category": "Programming"
+  },
+  {
+    "id": 2,
+    "name": "Node.js",
+    "level": 85,
+    "category": "Backend"
+  },
+  {
+    "id": 3,
+    "name": "ReactJS",
+    "level": 85,
+    "category": "Frontend"
+  },
+  {
+    "id": 4,
+    "name": "Python",
+    "level": 85,
+    "category": "Programming"
+  },
+  {
+    "id": 5,
+    "name": "SQL Server",
+    "level": 80,
+    "category": "Database"
+  },
+  {
+    "id": 6,
+    "name": "MongoDB",
+    "level": 80,
+    "category": "Database"
+  },
+  {
+    "id": 7,
+    "name": "Firebase",
+    "level": 75,
+    "category": "Backend"
+  },
+  {
+    "id": 8,
+    "name": "Blockchain",
+    "level": 70,
+    "category": "Technology"
+  },
+  {
+    "id": 9,
+    "name": "Linux",
+    "level": 75,
+    "category": "DevOps"
+  },
+  {
+    "id": 10,
+    "name": "Git",
+    "level": 85,
+    "category": "DevOps"
+  },
+  {
+    "id": 11,
+    "name": "API Integration",
+    "level": 90,
+    "category": "Backend"
+  },
+  {
+    "id": 12,
+    "name": "Docker",
+    "level": 75,
+    "category": "DevOps"
+  },
+  {
+    "id": 13,
+    "name": "Business Analyst (BA)",
+    "level": 80,
+    "category": "Business"
+  },
+  {
+    "id": 14,
+    "name": "Quản lý dự án",
+    "level": 85,
+    "category": "Soft Skills"
+  },
+  {
+    "id": 15,
+    "name": "Làm việc nhóm",
+    "level": 90,
+    "category": "Soft Skills"
+  },
+  {
+    "id": 16,
+    "name": "Giao tiếp khách hàng",
+    "level": 85,
+    "category": "Soft Skills"
+  }
+]

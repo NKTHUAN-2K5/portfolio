@@ -1,0 +1,100 @@
+[
+  {
+    "id": 1,
+    "title": "Giải đặc biệt đổi mới sáng tạo về AI",
+    "organization": "Cuộc thi đổi mới sáng tạo",
+    "date": "2024",
+    "description": "Giải đặc biệt về đổi mới sáng tạo trong lĩnh vực trí tuệ nhân tạo"
+  },
+  {
+    "id": 2,
+    "title": "Top 30 bán kết Sáng tạo trẻ về AI",
+    "organization": "Sáng tạo trẻ",
+    "date": "2024",
+    "description": "Lọt vào top 30 bán kết cuộc thi Sáng tạo trẻ về AI"
+  },
+  {
+    "id": 3,
+    "title": "Top 30 bán kết Sáng tạo khuyết tật AI",
+    "organization": "Sáng tạo khuyết tật AI",
+    "date": "2024",
+    "description": "Top 30 bán kết cuộc thi Sáng tạo khuyết tật về AI"
+  },
+  {
+    "id": 4,
+    "title": "Giải Z bee BITECH HACKATHON",
+    "organization": "BITECH HACKATHON",
+    "date": "2024",
+    "description": "Đạt giải trong cuộc thi Z bee BITECH HACKATHON"
+  },
+  {
+    "id": 5,
+    "title": "Top StartUp Innovation Quest AI",
+    "organization": "Innovation Quest",
+    "date": "2024",
+    "description": "Lọt top StartUp Innovation Quest về AI"
+  },
+  {
+    "id": 6,
+    "title": "Top StartUp UII SANDBOX về AI",
+    "organization": "UII SANDBOX",
+    "date": "2024",
+    "description": "Đạt top StartUp tại UII SANDBOX về AI"
+  },
+  {
+    "id": 7,
+    "title": "Chung kết học thuật về Website",
+    "organization": "Cuộc thi học thuật",
+    "date": "2024",
+    "description": "Lọt vào chung kết học thuật về phát triển Website"
+  },
+  {
+    "id": 8,
+    "title": "Đồng sáng lập ACCEDU",
+    "organization": "Công ty TNHH ACCEDU",
+    "date": "2025",
+    "description": "Đồng sáng lập công ty Công Nghệ-IOT-AI TNHH ACCEDU"
+  },
+  {
+    "id": 9,
+    "title": "Tác giả tham gia viết sách khoa học Quốc Gia",
+    "organization": "Nhà xuất bản Quốc Gia",
+    "date": "2024",
+    "description": "Tác giả tham gia viết sách khoa học Quốc Gia về đổi mới công nghệ trong y học"
+  },
+  {
+    "id": 10,
+    "title": "Nghiên cứu khoa học về An Ninh Mạng",
+    "organization": "Viện nghiên cứu",
+    "date": "2024",
+    "description": "Thực hiện nghiên cứu khoa học về An Ninh Mạng"
+  },
+  {
+    "id": 11,
+    "title": "6 bài báo khen thưởng và lên truyền hình",
+    "organization": "Báo chí & Truyền hình",
+    "date": "2024",
+    "description": "Được viết 6 bài báo khen thưởng và xuất hiện hai lần trên truyền hình"
+  },
+  {
+    "id": 12,
+    "title": "Bán kết Cuộc thi Smart CITY 2025",
+    "organization": "Smart CITY",
+    "date": "2025",
+    "description": "Lọt vào bán kết Cuộc thi Smart CITY 2025"
+  },
+  {
+    "id": 13,
+    "title": "E-COMMERCE VIDEO COMPETITION MÙA 3",
+    "organization": "E-Commerce Competition",
+    "date": "2024",
+    "description": "Tham gia cuộc thi E-COMMERCE VIDEO COMPETITION MÙA 3"
+  },
+  {
+    "id": 14,
+    "title": "StarUp Wheel 2025",
+    "organization": "StarUp Wheel",
+    "date": "2025",
+    "description": "Tham gia chương trình StarUp Wheel 2025"
+  }
+]

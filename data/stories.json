@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "title": "Giai đoạn 1 – Xây nền tảng kỹ thuật",
+    "content": "2023: sinh viên Hệ thống thông tin, xây nền tảng lập trình web, cơ sở dữ liệu, tư duy hệ thống và phân tích bài toán. Luôn hỏi về hiệu năng, dữ liệu, khả năng mở rộng; học đi đôi với làm để gắn kỹ thuật vào bài toán thật.",
+    "date": "2023-05-01",
+    "category": "Học tập",
+    "images": []
+  },
+  {
+    "id": 2,
+    "title": "Giai đoạn 2 – Dự án thực tế & Freelance",
+    "content": "2024: nhận dự án website thực tế, làm trực tiếp với khách hàng; triển khai frontend (ReactJS), backend (NodeJS/API) và database. Nhận ra viết code chỉ là một phần; giao tiếp, quản lý thời gian và hiểu nhu cầu quyết định chất lượng sản phẩm.",
+    "date": "2024-03-15",
+    "category": "Dự án",
+    "images": []
+  },
+  {
+    "id": 3,
+    "title": "Giai đoạn 3 – Tư duy sản phẩm & quản lý",
+    "content": "Cuối 2024–2025: Product Manager tại MG Technology Việt Nam. Thu thập/ phân tích yêu cầu, điều phối đội kỹ thuật, theo dõi tiến độ & chất lượng, phối hợp marketing. Hiểu mối liên hệ giữa quyết định kỹ thuật, trải nghiệm người dùng và giá trị kinh doanh; chủ động đề xuất giải pháp.",
+    "date": "2024-11-15",
+    "category": "Quản lý sản phẩm",
+    "images": []
+  },
+  {
+    "id": 4,
+    "title": "Giai đoạn 4 – Vận hành doanh nghiệp & sản phẩm",
+    "content": "Từ 2025: Founder & COO tại ACCEDU, VACCSOLUTION. Điều phối vận hành đội ngũ, phối hợp PM/Fullstack/Data Analyst, tham gia kiến trúc hệ thống và dashboard dữ liệu, làm việc trực tiếp với khách hàng/đối tác, kiểm soát tiến độ, chất lượng và rủi ro, chịu trách nhiệm kết quả.",
+    "date": "2025-05-01",
+    "category": "Vận hành",
+    "images": []
+  },
+  {
+    "id": 5,
+    "title": "Giai đoạn 5 – Học thuật gắn với ứng dụng",
+    "content": "Xuyên suốt: nghiên cứu An ninh mạng; viết sách khoa học cấp Quốc gia về đổi mới công nghệ trong y học; tham gia cuộc thi AI, Hackathon, Smart City, Innovation. Mục tiêu: đưa nghiên cứu vào sản phẩm, không dừng ở lý thuyết.",
+    "date": "2025-02-01",
+    "category": "Học thuật",
+    "images": []
+  },
+  {
+    "id": 6,
+    "title": "Giai đoạn 6 – Startup & hệ sinh thái",
+    "content": "2025 → : tham gia Startup Wheel, Innovation Quest AI, UII Sandbox; hoàn thiện mô hình sản phẩm, giá trị cốt lõi, roadmap; kết nối công nghệ với nhu cầu xã hội/thị trường. Chuyển từ làm sản phẩm tốt sang xây doanh nghiệp bền vững.",
+    "date": "2025-08-15",
+    "category": "Startup",
+    "images": []
+  }
+]
