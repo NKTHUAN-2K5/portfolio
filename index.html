@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Tên của bạn</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">Portfolio</div>
+            <ul class="nav-menu">
+                <li><a href="#home">Trang chủ</a></li>
+                <li><a href="#stories">Câu chuyện</a></li>
+                <li><a href="#gallery">Ảnh hoạt động</a></li>
+                <li><a href="#projects">Dự án</a></li>
+                <li><a href="#skills">Kỹ năng</a></li>
+                <li><a href="#experience">Kinh nghiệm</a></li>
+                <li><a href="#contact">Liên hệ</a></li>
+                <li><a href="#" id="nav-settings-btn">Cài đặt</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text reveal-left">
+                <h1 id="profile-name">Tên của bạn</h1>
+                <h2 id="profile-title">Full Stack Developer</h2>
+                <p id="profile-bio">Tôi là một developer đam mê công nghệ...</p>
+                <div class="hero-buttons">
+                    <a href="#stories" class="btn btn-primary">Xem câu chuyện</a>
+                    <a href="#contact" class="btn btn-secondary">Liên hệ</a>
+                </div>
+                <div class="social-links" id="social-links">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+            <div class="hero-image reveal-right">
+                <div class="avatar-container">
+                    <img id="profile-avatar" src="https://via.placeholder.com/300" alt="Avatar">
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+        </div>
+    </section>
+
+    <!-- Stories Section - PHẦN QUAN TRỌNG NHẤT -->
+    <section id="stories" class="stories-section">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <h2>Câu chuyện & Hoạt động gần đây</h2>
+                <p>Chứng minh tôi đang làm việc thật sự - không phải hồ sơ chết</p>
+            </div>
+            
+            <div class="story-timeline" id="story-timeline">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section - Ảnh hoạt động -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <h2>Ảnh hoạt động</h2>
+                <p>Những khoảnh khắc đáng nhớ trong công việc và cuộc sống</p>
+            </div>
+            
+            <div class="gallery-filter reveal-up">
+                <button class="filter-btn active" data-filter="all">Tất cả</button>
+                <button class="filter-btn" data-filter="Công việc">Công việc</button>
+                <button class="filter-btn" data-filter="Hoạt động">Hoạt động</button>
+                <button class="filter-btn" data-filter="Sự kiện">Sự kiện</button>
+                <button class="filter-btn" data-filter="Khác">Khác</button>
+            </div>
+            
+            <div class="gallery-grid" id="gallery-grid">
+                <!-- Static gallery items embedded -->
+                <div class="gallery-item reveal-up" data-category="Sự kiện">
+                    <img src="../Giải%20Thưởng%20các%20cuộc%20thi-%20Nguyễn%20Khắt%20Thuần-%20231A011097/BizTech%20Hackathon.jpg" alt="BizTech Hackathon" class="gallery-image" onclick="openLightbox('../Giải%20Thưởng%20các%20cuộc%20thi-%20Nguyễn%20Khắt%20Thuần-%20231A011097/BizTech%20Hackathon.jpg')">
+                    <div class="gallery-overlay">
+                        <h3>BizTech Hackathon</h3>
+                        <p>Tham gia sự kiện Hackathon</p>
+                        <span class="gallery-category">Sự kiện</span>
+                    </div>
+                </div>
+                <div class="gallery-item reveal-up" data-category="Sự kiện">
+                    <img src="../Giải%20Thưởng%20các%20cuộc%20thi-%20Nguyễn%20Khắt%20Thuần-%20231A011097/BizTech%20Hackathon2025.jpg" alt="BizTech Hackathon 2025" class="gallery-image" onclick="openLightbox('../Giải%20Thưởng%20các%20cuộc%20thi-%20Nguyễn%20Khắt%20Thuần-%20231A011097/BizTech%20Hackathon2025.jpg')">
+                    <div class="gallery-overlay">
+                        <h3>BizTech Hackathon 2025</h3>
+                        <p>Sự kiện công nghệ dành cho sinh viên</p>
+                        <span class="gallery-category">Sự kiện</span>
+                    </div>
+                </div>
+                <div class="gallery-item reveal-up" data-category="Hoạt động">
+                    <img src="../Giải%20Thưởng%20các%20cuộc%20thi-%20Nguyễn%20Khắt%20Thuần-%20231A011097/clb%20Nắng%20Yêu%20Thương.jpg" alt="CLB Nắng Yêu Thương" class="gallery-image" onclick="openLightbox('../Giải%20Thưởng%20các%20cuộc%20thi-%20Nguyễn%20Khắt%20Thuần-%20231A011097/clb%20Nắng%20Yêu%20Thương.jpg')">
+                    <div class="gallery-overlay">
+                        <h3>CLB Nắng Yêu Thương</h3>
+                        <p>Hoạt động thiện nguyện</p>
+                        <span class="gallery-category">Hoạt động</span>
+                    </div>
+                </div>
+                <div class="gallery-item reveal-up" data-category="Hoạt động">
+                    <img src="../Giải%20Thưởng%20các%20cuộc%20thi-%20Nguyễn%20Khắt%20Thuần-%20231A011097/CLB%20_%20CHUYẾN%20ĐI%20THANH%20XUÂN_%20.jpg" alt="CLB Chuyến đi thanh xuân" class="gallery-image" onclick="openLightbox('../Giải%20Thưởng%20các%20cuộc%20thi-%20Nguyễn%20Khắt%20Thuần-%20231A011097/CLB%20_%20CHUYẾN%20ĐI%20THANH%20XUÂN_%20.jpg')">
+                    <div class="gallery-overlay">
+                        <h3>CLB - Chuyến đi thanh xuân</h3>
+                        <p>Sinh hoạt câu lạc bộ</p>
+                        <span class="gallery-category">Hoạt động</span>
+                    </div>
+                </div>
+                <div class="gallery-item reveal-up" data-category="Sự kiện">
+                    <img src="../Giải%20Thưởng%20các%20cuộc%20thi-%20Nguyễn%20Khắt%20Thuần-%20231A011097/Cuộc%20Thi%20Học%20Thuật.jpg" alt="Cuộc thi học thuật" class="gallery-image" onclick="openLightbox('../Giải%20Thưởng%20các%20cuộc%20thi-%20Nguyễn%20Khắt%20Thuần-%20231A011097/Cuộc%20Thi%20Học%20Thuật.jpg')">
+                    <div class="gallery-overlay">
+                        <h3>Cuộc thi học thuật</h3>
+                        <p>Tham gia và học hỏi</p>
+                        <span class="gallery-category">Sự kiện</span>
+                    </div>
+                </div>
+                <div class="gallery-item reveal-up" data-category="Sự kiện">
+                    <img src="../Giải%20Thưởng%20các%20cuộc%20thi-%20Nguyễn%20Khắt%20Thuần-%20231A011097/Cuộc%20thi%20Smart%20CITY%202025.jpg" alt="Smart CITY 2025" class="gallery-image" onclick="openLightbox('../Giải%20Thưởng%20các%20cuộc%20thi-%20Nguyễn%20Khắt%20Thuần-%20231A011097/Cuộc%20thi%20Smart%20CITY%202025.jpg')">
+                    <div class="gallery-overlay">
+                        <h3>Smart CITY 2025</h3>
+                        <p>Cuộc thi giải pháp đô thị thông minh</p>
+                        <span class="gallery-category">Sự kiện</span>
+                    </div>
+                </div>
+                <div class="gallery-item reveal-up" data-category="Sự kiện">
+                    <img src="../Giải%20Thưởng%20các%20cuộc%20thi-%20Nguyễn%20Khắt%20Thuần-%20231A011097/Innovation%20Quest%202025.jpg" alt="Innovation Quest 2025" class="gallery-image" onclick="openLightbox('../Giải%20Thưởng%20các%20cuộc%20thi-%20Nguyễn%20Khắt%20Thuần-%20231A011097/Innovation%20Quest%202025.jpg')">
+                    <div class="gallery-overlay">
+                        <h3>Innovation Quest 2025</h3>
+                        <p>Hội nghị đổi mới sáng tạo</p>
+                        <span class="gallery-category">Sự kiện</span>
+                    </div>
+                </div>
+                <div class="gallery-item reveal-up" data-category="Sự kiện">
+                    <img src="../Giải%20Thưởng%20các%20cuộc%20thi-%20Nguyễn%20Khắt%20Thuần-%20231A011097/UII%20SANDBOX%202025.jpg" alt="UII SANDBOX 2025" class="gallery-image" onclick="openLightbox('../Giải%20Thưởng%20các%20cuộc%20thi-%20Nguyễn%20Khắt%20Thuần-%20231A011097/UII%20SANDBOX%202025.jpg')">
+                    <div class="gallery-overlay">
+                        <h3>UII SANDBOX 2025</h3>
+                        <p>Seeds of Change: Gen Z Technopreneurs</p>
+                        <span class="gallery-category">Sự kiện</span>
+                    </div>
+                </div>
+                <div class="gallery-item reveal-up" data-category="Sự kiện">
+                    <img src="../Giải%20Thưởng%20các%20cuộc%20thi-%20Nguyễn%20Khắt%20Thuần-%20231A011097/UII%20SANDBOX%202025(1).jpg" alt="UII SANDBOX 2025 (1)" class="gallery-image" onclick="openLightbox('../Giải%20Thưởng%20các%20cuộc%20thi-%20Nguyễn%20Khắt%20Thuần-%20231A011097/UII%20SANDBOX%202025(1).jpg')">
+                    <div class="gallery-overlay">
+                        <h3>UII SANDBOX 2025</h3>
+                        <p>Khoảnh khắc đội nhóm</p>
+                        <span class="gallery-category">Sự kiện</span>
+                    </div>
+                </div>
+                <div class="gallery-item reveal-up" data-category="Sự kiện">
+                    <img src="../Giải%20Thưởng%20các%20cuộc%20thi-%20Nguyễn%20Khắt%20Thuần-%20231A011097/UII%20SANDBOX%202025(2).jpg" alt="UII SANDBOX 2025 (2)" class="gallery-image" onclick="openLightbox('../Giải%20Thưởng%20các%20cuộc%20thi-%20Nguyễn%20Khắt%20Thuần-%20231A011097/UII%20SANDBOX%202025(2).jpg')">
+                    <div class="gallery-overlay">
+                        <h3>UII SANDBOX 2025</h3>
+                        <p>Poster đội dự án</p>
+                        <span class="gallery-category">Sự kiện</span>
+                    </div>
+                </div>
+                <div class="gallery-item reveal-up" data-category="Sự kiện">
+                    <img src="../Giải%20Thưởng%20các%20cuộc%20thi-%20Nguyễn%20Khắt%20Thuần-%20231A011097/StarUp%20Wheel%202025.jpg" alt="Startup Wheel 2025" class="gallery-image" onclick="openLightbox('../Giải%20Thưởng%20các%20cuộc%20thi-%20Nguyễn%20Khắt%20Thuần-%20231A011097/StarUp%20Wheel%202025.jpg')">
+                    <div class="gallery-overlay">
+                        <h3>Startup Wheel 2025</h3>
+                        <p>Sơ tuyển khu vực miền Nam</p>
+                        <span class="gallery-category">Sự kiện</span>
+                    </div>
+                </div>
+                <div class="gallery-item reveal-up" data-category="Sự kiện">
+                    <img src="../Giải%20Thưởng%20các%20cuộc%20thi-%20Nguyễn%20Khắt%20Thuần-%20231A011097/StarUp%20Wheel%202025(1).jpg" alt="Startup Wheel 2025 (1)" class="gallery-image" onclick="openLightbox('../Giải%20Thưởng%20các%20cuộc%20thi-%20Nguyễn%20Khắt%20Thuần-%20231A011097/StarUp%20Wheel%202025(1).jpg')">
+                    <div class="gallery-overlay">
+                        <h3>Startup Wheel 2025</h3>
+                        <p>Check-in cùng đồng đội</p>
+                        <span class="gallery-category">Sự kiện</span>
+                    </div>
+                </div>
+                <div class="gallery-item reveal-up" data-category="Công việc">
+                    <img src="../Giải%20Thưởng%20các%20cuộc%20thi-%20Nguyễn%20Khắt%20Thuần-%20231A011097/Nghiên%20cứu%20Khoa%20Học.jpg" alt="Nghiên cứu khoa học" class="gallery-image" onclick="openLightbox('../Giải%20Thưởng%20các%20cuộc%20thi-%20Nguyễn%20Khắt%20Thuần-%20231A011097/Nghiên%20cứu%20Khoa%20Học.jpg')">
+                    <div class="gallery-overlay">
+                        <h3>Nghiên cứu Khoa Học</h3>
+                        <p>Trình bày sản phẩm AI cho người khuyết tật</p>
+                        <span class="gallery-category">Công việc</span>
+                    </div>
+                </div>
+                <div class="gallery-item reveal-up" data-category="Hoạt động">
+                    <img src="../Giải%20Thưởng%20các%20cuộc%20thi-%20Nguyễn%20Khắt%20Thuần-%20231A011097/HOẠT%20ĐỘNG%20ĐOÀN%20THANH%20NIÊN%20QUẬN%20TÂN%20PHÚ.jpg" alt="Đoàn thanh niên" class="gallery-image" onclick="openLightbox('../Giải%20Thưởng%20các%20cuộc%20thi-%20Nguyễn%20Khắt%20Thuần-%20231A011097/HOẠT%20ĐỘNG%20ĐOÀN%20THANH%20NIÊN%20QUẬN%20TÂN%20PHÚ.jpg')">
+                    <div class="gallery-overlay">
+                        <h3>Hoạt động Đoàn Thanh Niên</h3>
+                        <p>Góp sức cùng cộng đồng</p>
+                        <span class="gallery-category">Hoạt động</span>
+                    </div>
+                </div>
+                <div class="gallery-item reveal-up" data-category="Hoạt động">
+                    <img src="../Giải%20Thưởng%20các%20cuộc%20thi-%20Nguyễn%20Khắt%20Thuần-%20231A011097/tham%20gia%20trao%20quà%20yêu%20thương%20cùng%20câu%20lạc%20bộ%20Xiaomi_.jpg" alt="Trao quà yêu thương" class="gallery-image" onclick="openLightbox('../Giải%20Thưởng%20các%20cuộc%20thi-%20Nguyễn%20Khắt%20Thuần-%20231A011097/tham%20gia%20trao%20quà%20yêu%20thương%20cùng%20câu%20lạc%20bộ%20Xiaomi_.jpg')">
+                    <div class="gallery-overlay">
+                        <h3>Trao quà yêu thương</h3>
+                        <p>Cùng CLB Xiaomi hỗ trợ cộng đồng</p>
+                        <span class="gallery-category">Hoạt động</span>
+                    </div>
+                </div>
+                <div class="gallery-item reveal-up" data-category="Hoạt động">
+                    <img src="../Giải%20Thưởng%20các%20cuộc%20thi-%20Nguyễn%20Khắt%20Thuần-%20231A011097/Trao%20quà%20%20Trung%20Thu%20đến%20Mái%20Ấm%20.jpg" alt="Trao quà Trung Thu" class="gallery-image" onclick="openLightbox('../Giải%20Thưởng%20các%20cuộc%20thi-%20Nguyễn%20Khắt%20Thuần-%20231A011097/Trao%20quà%20%20Trung%20Thu%20đến%20Mái%20Ấm%20.jpg')">
+                    <div class="gallery-overlay">
+                        <h3>Trung Thu tại Mái Ấm</h3>
+                        <p>Trao quà cho các em nhỏ</p>
+                        <span class="gallery-category">Hoạt động</span>
+                    </div>
+                </div>
+                <div class="gallery-item reveal-up" data-category="Hoạt động">
+                    <img src="../Giải%20Thưởng%20các%20cuộc%20thi-%20Nguyễn%20Khắt%20Thuần-%20231A011097/Trao%20quà%20đến%20các%20bạn%20sinh%20viên%20Văn%20Hiến%20%20bị%20khiếm%20khuyết.jpg" alt="Trao quà sinh viên" class="gallery-image" onclick="openLightbox('../Giải%20Thưởng%20các%20cuộc%20thi-%20Nguyễn%20Khắt%20Thuần-%20231A011097/Trao%20quà%20đến%20các%20bạn%20sinh%20viên%20Văn%20Hiến%20%20bị%20khiếm%20khuyết.jpg')">
+                    <div class="gallery-overlay">
+                        <h3>Trao quà sinh viên Văn Hiến</h3>
+                        <p>Chia sẻ cùng các bạn khiếm khuyết</p>
+                        <span class="gallery-category">Hoạt động</span>
+                    </div>
+                </div>
+                <div class="gallery-item reveal-up" data-category="Sự kiện">
+                    <img src="../Giải%20Thưởng%20các%20cuộc%20thi-%20Nguyễn%20Khắt%20Thuần-%20231A011097/Đổi%20mới%20sáng%20tạo%20Công%20Nghệ%20.jpg" alt="Đổi mới sáng tạo công nghệ" class="gallery-image" onclick="openLightbox('../Giải%20Thưởng%20các%20cuộc%20thi-%20Nguyễn%20Khắt%20Thuần-%20231A011097/Đổi%20mới%20sáng%20tạo%20Công%20Nghệ%20.jpg')">
+                    <div class="gallery-overlay">
+                        <h3>Đổi mới sáng tạo Công Nghệ</h3>
+                        <p>Hoạt động tại trường</p>
+                        <span class="gallery-category">Sự kiện</span>
+                    </div>
+                </div>
+                <div class="gallery-item reveal-up" data-category="Sự kiện">
+                    <img src="../Giải%20Thưởng%20các%20cuộc%20thi-%20Nguyễn%20Khắt%20Thuần-%20231A011097/Đổi%20mới%20sáng%20tạo%20công%20nghệ%20%20Văn%20Hiến%20.jpg" alt="Đổi mới sáng tạo Văn Hiến" class="gallery-image" onclick="openLightbox('../Giải%20Thưởng%20các%20cuộc%20thi-%20Nguyễn%20Khắt%20Thuần-%20231A011097/Đổi%20mới%20sáng%20tạo%20công%20nghệ%20%20Văn%20Hiến%20.jpg')">
+                    <div class="gallery-overlay">
+                        <h3>Đổi mới sáng tạo Văn Hiến</h3>
+                        <p>Sự kiện tại HungHau - Văn Hiến</p>
+                        <span class="gallery-category">Sự kiện</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <h2>Dự án nổi bật</h2>
+                <p>Các dự án tôi đã thực hiện</p>
+            </div>
+            
+            <div class="projects-grid" id="projects-grid">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <h2>Kỹ năng</h2>
+                <p>Công nghệ và công cụ tôi sử dụng</p>
+            </div>
+            
+            <div class="skills-grid" id="skills-grid">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience-section">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <h2>Kinh nghiệm làm việc</h2>
+            </div>
+            
+            <div class="experience-timeline" id="experience-timeline">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education-section">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <h2>Học vấn</h2>
+            </div>
+            
+            <div class="education-grid" id="education-grid">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards Section -->
+    <section id="awards" class="awards-section">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <h2>Giải thưởng</h2>
+            </div>
+            
+            <div class="awards-grid" id="awards-grid">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Links Section -->
+    <section id="links" class="links-section">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <h2>Liên kết truyền thông</h2>
+                <p>Tổng hợp các bài báo, video và bài đăng liên quan</p>
+            </div>
+
+            <div class="links-grid" id="links-grid">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <h2>Liên hệ với tôi</h2>
+                <p>Hãy kết nối và cùng tạo ra điều tuyệt vời</p>
+            </div>
+            
+            <div class="contact-info" id="contact-info">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Portfolio. Made with ❤️</p>
+        </div>
+    </footer>
+
+    <!-- Story Detail Modal -->
+    <div id="story-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="story-detail">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="">
+        <div class="lightbox-nav">
+            <button class="lightbox-prev">&#10094;</button>
+            <button class="lightbox-next">&#10095;</button>
+        </div>
+    </div>
+
+    <!-- Settings Panel -->
+    <div class="settings-panel" id="settings-panel">
+        <div class="settings-header">
+            <h2><i class="fas fa-palette"></i> Tùy chỉnh giao diện</h2>
+            <button class="settings-close" id="settings-close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="settings-body">
+            <!-- Avatar Upload -->
+            <div class="settings-section">
+                <h3><i class="fas fa-user-circle"></i> Ảnh đại diện</h3>
+                <div class="avatar-upload-zone" id="avatar-upload-zone">
+                    <img id="settings-avatar-preview" src="https://via.placeholder.com/150" alt="Avatar">
+                    <input type="file" id="avatar-upload-input" accept="image/*">
+                </div>
+                <p style="text-align: center; color: var(--text-secondary); font-size: 0.85rem;">
+                    Click để thay đổi ảnh đại diện
+                </p>
+            </div>
+
+            <!-- Activity Upload -->
+            <div class="settings-section">
+                <h3><i class="fas fa-image"></i> Thêm ảnh hoạt động</h3>
+                <div class="form-group">
+                    <label for="activity-image-upload">Chọn ảnh</label>
+                    <input type="file" id="activity-image-upload" accept="image/*">
+                </div>
+                <div class="form-group">
+                    <label for="activity-title-input">Tiêu đề</label>
+                    <input type="text" id="activity-title-input" placeholder="Ví dụ: Giải thưởng, sự kiện...">
+                </div>
+                <div class="form-group">
+                    <label for="activity-desc-input">Mô tả</label>
+                    <textarea id="activity-desc-input" rows="3" placeholder="Thông tin ngắn gọn về hoạt động"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="activity-category-select">Phân loại</label>
+                    <select id="activity-category-select">
+                        <option value="Sự kiện">Sự kiện</option>
+                        <option value="Hoạt động">Hoạt động</option>
+                        <option value="Công việc">Công việc</option>
+                        <option value="Khác">Khác</option>
+                    </select>
+                </div>
+                <button class="btn-save-settings" id="add-activity-btn" style="width: 100%; margin-top: 0.5rem;">
+                    <i class="fas fa-cloud-upload-alt"></i> Tải lên ảnh hoạt động
+                </button>
+            </div>
+
+            <!-- Theme Presets -->
+            <div class="settings-section">
+                <h3><i class="fas fa-swatchbook"></i> Theme có sẵn</h3>
+                <div class="theme-presets">
+                    <div class="theme-preset active" data-theme="professional">
+                        <div class="theme-preview">
+                            <div class="theme-color" style="background: #2563eb;"></div>
+                            <div class="theme-color" style="background: #3b82f6;"></div>
+                            <div class="theme-color" style="background: #0ea5e9;"></div>
+                        </div>
+                        <div class="theme-name">Chuyên nghiệp</div>
+                    </div>
+                    
+                    <div class="theme-preset" data-theme="modern">
+                        <div class="theme-preview">
+                            <div class="theme-color" style="background: #8b5cf6;"></div>
+                            <div class="theme-color" style="background: #a78bfa;"></div>
+                            <div class="theme-color" style="background: #c084fc;"></div>
+                        </div>
+                        <div class="theme-name">Hiện đại</div>
+                    </div>
+                    
+                    <div class="theme-preset" data-theme="ocean">
+                        <div class="theme-preview">
+                            <div class="theme-color" style="background: #06b6d4;"></div>
+                            <div class="theme-color" style="background: #0891b2;"></div>
+                            <div class="theme-color" style="background: #0e7490;"></div>
+                        </div>
+                        <div class="theme-name">Đại dương</div>
+                    </div>
+                    
+                    <div class="theme-preset" data-theme="sunset">
+                        <div class="theme-preview">
+                            <div class="theme-color" style="background: #f59e0b;"></div>
+                            <div class="theme-color" style="background: #f97316;"></div>
+                            <div class="theme-color" style="background: #ea580c;"></div>
+                        </div>
+                        <div class="theme-name">Hoàng hôn</div>
+                    </div>
+                    
+                    <div class="theme-preset" data-theme="forest">
+                        <div class="theme-preview">
+                            <div class="theme-color" style="background: #10b981;"></div>
+                            <div class="theme-color" style="background: #059669;"></div>
+                            <div class="theme-color" style="background: #047857;"></div>
+                        </div>
+                        <div class="theme-name">Rừng xanh</div>
+                    </div>
+                    
+                    <div class="theme-preset" data-theme="rose">
+                        <div class="theme-preview">
+                            <div class="theme-color" style="background: #f43f5e;"></div>
+                            <div class="theme-color" style="background: #e11d48;"></div>
+                            <div class="theme-color" style="background: #be123c;"></div>
+                        </div>
+                        <div class="theme-name">Hồng hoa</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Custom Colors -->
+            <div class="settings-section">
+                <h3><i class="fas fa-paint-brush"></i> Màu tùy chỉnh</h3>
+                
+                <div class="color-picker-group">
+                    <label>Màu chính</label>
+                    <div class="color-picker-wrapper">
+                        <input type="color" id="primary-color-picker" value="#2563eb">
+                        <input type="text" class="color-value" id="primary-color-value" value="#2563eb" readonly>
+                    </div>
+                </div>
+                
+                <div class="color-picker-group">
+                    <label>Màu phụ</label>
+                    <div class="color-picker-wrapper">
+                        <input type="color" id="secondary-color-picker" value="#3b82f6">
+                        <input type="text" class="color-value" id="secondary-color-value" value="#3b82f6" readonly>
+                    </div>
+                </div>
+                
+                <div class="color-picker-group">
+                    <label>Màu nhấn</label>
+                    <div class="color-picker-wrapper">
+                        <input type="color" id="accent-color-picker" value="#0ea5e9">
+                        <input type="text" class="color-value" id="accent-color-value" value="#0ea5e9" readonly>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="settings-actions">
+                <button class="btn-reset" id="reset-settings">
+                    <i class="fas fa-undo"></i> Đặt lại
+                </button>
+                <button class="btn-save-settings" id="save-settings">
+                    <i class="fas fa-save"></i> Lưu
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
