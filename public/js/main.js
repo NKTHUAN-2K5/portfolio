@@ -159,9 +159,16 @@ function addGalleryItemToGrid(item) {
     galleryItem.className = 'gallery-item reveal-up';
     galleryItem.dataset.category = item.category || 'Khác';
 
-    const imageSrc = item.image ? encodeURI(item.image) : '';
+    // Build robust image source with fallbacks for static hosting (spaces/diacritics)
+    const rawPath = item.image || '';
+    const primarySrc = rawPath;
+    const secondarySrc = rawPath.startsWith('/') ? rawPath.slice(1) : rawPath; // try without leading slash
+    const encodedPrimary = rawPath ? encodeURI(rawPath) : '';
+    const encodedSecondary = secondarySrc ? encodeURI(secondarySrc) : '';
+    const imageSrc = encodedPrimary || primarySrc;
+    const fallbackSrc = encodedSecondary || secondarySrc;
     const imageHTML = imageSrc
-        ? `<img src="${imageSrc}" alt="${item.title || 'Hoạt động'}" class="gallery-image" onclick="openLightbox('${imageSrc}')">`
+        ? `<img src="${imageSrc}" alt="${item.title || 'Hoạt động'}" class="gallery-image" onclick="openLightbox('${imageSrc}')" onerror="if (this.dataset.retry!=='1'){ this.dataset.retry='1'; this.src='${fallbackSrc}'; } else { this.parentElement.style.background='var(--gradient)'; this.remove(); }">`
         : '<div class="gallery-image" style="background: var(--gradient);"></div>';
 
     galleryItem.innerHTML = `
