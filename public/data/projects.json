@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "title": "EDUVISION AI",
+    "description": "Nền tảng học tập AI với khả năng cá nhân hóa nội dung học, Web Flow và giao diện người dùng thân thiện. Đóng góp vào thiết kế hệ thống và phát triển webapp.",
+    "technologies": ["AI (LLM, NLP)", "ReactJS", "NodeJS"],
+    "image": "",
+    "link": "",
+    "date": "2024"
+  },
+  {
+    "id": 2,
+    "title": "AccessiCoreAI",
+    "description": "Giải pháp AI hỗ trợ người khiếm khuyết, cung cấp công nghệ accessibility tiên tiến để nâng cao trải nghiệm người dùng.",
+    "technologies": ["AI (LLM)", "ReactJS", "Python", "Accessibility"],
+    "image": "",
+    "link": "",
+    "date": "2024"
+  },
+  {
+    "id": 3,
+    "title": "ACC - Cảnh báo tư thế ngồi",
+    "description": "Hệ thống AI giám sát và cảnh báo tư thế ngồi, hỗ trợ bảo vệ sức khỏe người dùng trong quá trình làm việc.",
+    "technologies": ["AI (Computer Vision)", "IoT", "Python", "TensorFlow"],
+    "image": "",
+    "link": "",
+    "date": "2024"
+  },
+  {
+    "id": 4,
+    "title": "VILAWLEGISAI",
+    "description": "Nền tảng AI tra cứu luật pháp, giúp người dùng nhanh chóng tìm kiếm và hiểu rõ các quy định pháp luật liên quan.",
+    "technologies": ["AI (NLP)", "Database", "ReactJS", "NodeJS"],
+    "image": "",
+    "link": "",
+    "date": "2025"
+  },
+  {
+    "id": 5,
+    "title": "Web Flow - Địa đạo Phú Thọ Hòa",
+    "description": "Website quản lý thông tin và quy trình cho dự án địa đạo Phú Thọ Hòa, cung cấp giao diện thân thiện cho người dùng.",
+    "technologies": ["ReactJS", "NodeJS", "MongoDB", "Express"],
+    "image": "",
+    "link": "",
+    "date": "2024"
+  },
+  {
+    "id": 6,
+    "title": "Web Cộng Đồng Yêu Thương",
+    "description": "Platform kết nối cộng đồng tình nguyện, hỗ trợ các hoạt động từ thiện và quản lý dự án xã hội.",
+    "technologies": ["ReactJS", "NodeJS", "Firebase", "Tailwind CSS"],
+    "image": "",
+    "link": "",
+    "date": "2024"
+  },
+  {
+    "id": 7,
+    "title": "AquaCore AI - IoT Giám sát ao cá",
+    "description": "Hệ thống IoT giám sát tự động các thông số ao cá (pH, nhiệt độ, oxy...) với AI tối ưu hóa hiệu suất nuôi trồng.",
+    "technologies": ["IoT", "Python", "Machine Learning", "Sensors", "Mobile App"],
+    "image": "",
+    "link": "",
+    "date": "2024"
+  },
+  {
+    "id": 8,
+    "title": "VisionMinAI - IoT Giám sát tư thế",
+    "description": "Giải pháp IoT + Computer Vision giám sát và nhận diện hình ảnh tư thế ngồi, cảnh báo tư thế không đúng để bảo vệ sức khỏe.",
+    "technologies": ["IoT", "Computer Vision", "Python", "TensorFlow", "Real-time Processing"],
+    "image": "",
+    "link": "",
+    "date": "2024"
+  },
+  {
+    "id": 9,
+    "title": "AquaCore - Webapp",
+    "description": "Ứng dụng web quản lý dữ liệu ao cá, hiển thị thống kê và báo cáo chi tiết từ hệ thống IoT AquaCore.",
+    "technologies": ["ReactJS", "Python", "PostgreSQL", "Chart.js", "Real-time Updates"],
+    "image": "",
+    "link": "",
+    "date": "2024"
+  },
+  {
+    "id": 10,
+    "title": "Dashboard báo cáo dữ liệu khách hàng",
+    "description": "Xây dựng và triển khai dashboard phân tích hành vi người dùng, tối ưu hóa hiệu suất hệ thống và hỗ trợ phát triển chiến lược marketing.",
+    "technologies": ["Python", "SQL Server", "Data Analytics", "Tableau"],
+    "image": "",
+    "link": "",
+    "date": "2024"
+  }
+]

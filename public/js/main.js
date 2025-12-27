@@ -1,6 +1,19 @@
 // API Base URL
 const API_URL = 'http://localhost:3000/api';
 
+// Generic fetch with fallback to static JSON (useful on static hosts like Vercel)
+async function fetchWithFallback(apiEndpoint, fallbackPath) {
+    try {
+        const res = await fetch(`${API_URL}/${apiEndpoint}`);
+        if (!res.ok) throw new Error(`API ${apiEndpoint} failed`);
+        return await res.json();
+    } catch (err) {
+        console.warn(`Using fallback for ${apiEndpoint}:`, err.message);
+        const fallbackRes = await fetch(fallbackPath);
+        return await fallbackRes.json();
+    }
+}
+
 // ==================== LOAD DATA ON PAGE LOAD ====================
 document.addEventListener('DOMContentLoaded', () => {
     loadProfile();
@@ -128,8 +141,7 @@ async function loadGallery() {
         const existing = document.querySelector('#gallery-grid .gallery-item');
         if (existing) return;
 
-        const response = await fetch(`${API_URL}/gallery`);
-        const gallery = await response.json();
+            const gallery = await fetchWithFallback('gallery', '/data/gallery.json');
         
         const grid = document.getElementById('gallery-grid');
         grid.innerHTML = '';
@@ -352,8 +364,7 @@ async function loadAwards() {
 // ==================== LOAD LINKS ====================
 async function loadLinks() {
     try {
-        const response = await fetch(`${API_URL}/links`);
-        const links = await response.json();
+          const links = await fetchWithFallback('links', '/data/links.json');
 
         const grid = document.getElementById('links-grid');
         if (!grid) return;

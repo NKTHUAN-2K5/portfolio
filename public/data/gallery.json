@@ -1,0 +1,106 @@
+[
+  {
+    "id": 1,
+    "title": "Hoạt động Đoàn Thanh Niên Quận Tân Phú",
+    "description": "Tham gia hoạt động hỗ trợ thanh niên có hoàn cảnh khó khăn",
+    "image": "/assets/HOẠT ĐỘNG ĐOÀN THANH NIÊN QUẬN TÂN PHÚ.jpg",
+    "category": "Hoạt động",
+    "date": "2025-01-20"
+  },
+  {
+    "id": 2,
+    "title": "Đổi mới sáng tạo Công Nghệ",
+    "description": "Tham dự sự kiện đổi mới sáng tạo công nghệ tại Văn Hiến",
+    "image": "/assets/Đổi mới sáng tạo Công Nghệ .jpg",
+    "category": "Sự kiện",
+    "date": "2024-11-27"
+  },
+  {
+    "id": 3,
+    "title": "Innovation Quest 2025",
+    "description": "Tham gia chương trình Innovation Quest về AI",
+    "image": "/assets/Innovation Quest 2025.jpg",
+    "category": "Sự kiện",
+    "date": "2025-02-10"
+  },
+  {
+    "id": 4,
+    "title": "StarUp Wheel 2025",
+    "description": "Tham dự vòng sơ tuyển khu vực miền Nam",
+    "image": "/assets/StarUp Wheel 2025.jpg",
+    "category": "Sự kiện",
+    "date": "2025-03-01"
+  },
+  {
+    "id": 5,
+    "title": "UII SANDBOX 2025",
+    "description": "Hoạt động tại chương trình UII SANDBOX của UEH",
+    "image": "/assets/UII SANDBOX 2025.jpg",
+    "category": "Sự kiện",
+    "date": "2025-03-15"
+  },
+  {
+    "id": 6,
+    "title": "Cuộc Thi Học Thuật",
+    "description": "Chung kết cuộc thi học thuật về website",
+    "image": "/assets/Cuộc Thi Học Thuật.jpg",
+    "category": "Sự kiện",
+    "date": "2024-09-15"
+  },
+  {
+    "id": 7,
+    "title": "Smart CITY 2025",
+    "description": "Bán kết Cuộc thi Smart CITY 2025",
+    "image": "/assets/Cuộc thi Smart CITY 2025.jpg",
+    "category": "Sự kiện",
+    "date": "2025-01-30"
+  },
+  {
+    "id": 8,
+    "title": "Nghiên cứu Khoa Học",
+    "description": "Nghiên cứu về an ninh mạng và công nghệ",
+    "image": "/assets/Nghiên cứu Khoa Học.jpg",
+    "category": "Công việc",
+    "date": "2024-08-10"
+  },
+  {
+    "id": 9,
+    "title": "CLB Nắng Yêu Thương",
+    "description": "Tham gia hoạt động cùng CLB Nắng Yêu Thương",
+    "image": "/assets/clb Nắng Yêu Thương.jpg",
+    "category": "Hoạt động",
+    "date": "2024-10-10"
+  },
+  {
+    "id": 10,
+    "title": "Trao quà yêu thương cùng CLB Xiaomi",
+    "description": "Hoạt động thiện nguyện trao quà yêu thương",
+    "image": "/assets/tham gia trao quà yêu thương cùng câu lạc bộ Xiaomi_.jpg",
+    "category": "Hoạt động",
+    "date": "2024-12-01"
+  },
+  {
+    "id": 11,
+    "title": "Trao quà Trung Thu đến Mái Ấm",
+    "description": "Chương trình tặng quà Trung Thu cho mái ấm",
+    "image": "/assets/Trao quà  Trung Thu đến Mái Ấm .jpg",
+    "category": "Hoạt động",
+    "date": "2024-09-20"
+  },
+  {
+    "id": 12,
+    "title": "Hỗ trợ sinh viên khiếm khuyết",
+    "description": "Trao quà đến các bạn sinh viên Văn Hiến bị khiếm khuyết",
+    "image": "/assets/Trao quà đến các bạn sinh viên Văn Hiến  bị khiếm khuyết.jpg",
+    "category": "Hoạt động",
+    "date": "2024-11-05"
+  },
+  {
+    "id": 13,
+    "title": "CLB Chuyến Đi Thanh Xuân",
+    "description": "Hoạt động cùng CLB Chuyến Đi Thanh Xuân",
+    "image": "/assets/CLB _ CHUYẾN ĐI THANH XUÂN_ .jpg",
+    "category": "Hoạt động",
+    "date": "2024-10-25"
+  }
+]
