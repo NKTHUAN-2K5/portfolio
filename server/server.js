@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, '../public')));
 app.use('/uploads', express.static(path.join(__dirname, '../uploads')));
 // Serve external assets folder containing activity photos
-app.use('/assets', express.static(path.join(__dirname, "../Giải Thưởng các cuộc thi- Nguyễn Khắt Thuần- 231A011097")));
+app.use('/assets', express.static(path.join(__dirname, '../')));
 
 // Ensure uploads directory exists
 const uploadsDir = path.join(__dirname, '../uploads');
@@ -40,7 +40,7 @@ const upload = multer({
     const allowedTypes = /jpeg|jpg|png|gif|webp/;
     const extname = allowedTypes.test(path.extname(file.originalname).toLowerCase());
     const mimetype = allowedTypes.test(file.mimetype);
-    
+
     if (mimetype && extname) {
       return cb(null, true);
     } else {
@@ -68,7 +68,7 @@ const writeJSON = (filename, data) => {
 app.post('/api/admin/login', (req, res) => {
   const { username, password } = req.body;
   const admin = readJSON('admin.json');
-  
+
   if (username === admin.username && password === admin.password) {
     res.json({ success: true, message: 'Đăng nhập thành công' });
   } else {
@@ -394,7 +394,7 @@ app.post('/api/upload', upload.single('image'), (req, res) => {
   if (!req.file) {
     return res.status(400).json({ message: 'Không có file được upload' });
   }
-  
+
   const imageUrl = `/uploads/${req.file.filename}`;
   res.json({ success: true, imageUrl: imageUrl });
 });
@@ -403,7 +403,7 @@ app.post('/api/upload-multiple', upload.array('images', 10), (req, res) => {
   if (!req.files || req.files.length === 0) {
     return res.status(400).json({ message: 'Không có file được upload' });
   }
-  
+
   const imageUrls = req.files.map(file => `/uploads/${file.filename}`);
   res.json({ success: true, imageUrls: imageUrls });
 });
