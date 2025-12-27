@@ -42,8 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // ==================== LOAD PROFILE ====================
 async function loadProfile() {
     try {
-        const response = await fetch(`${API_URL}/profile`);
-        const profile = await response.json();
+        const profile = await fetchWithFallback('profile', '/data/profile.json');
         
         document.getElementById('profile-name').textContent = profile.name;
         document.getElementById('profile-title').textContent = profile.title;
@@ -97,8 +96,7 @@ async function loadProfile() {
 // ==================== LOAD STORIES (QUAN TRỌNG) ====================
 async function loadStories() {
     try {
-        const response = await fetch(`${API_URL}/stories`);
-        const stories = await response.json();
+        const stories = await fetchWithFallback('stories', '/data/stories.json');
         
         const timeline = document.getElementById('story-timeline');
         timeline.innerHTML = '';
@@ -211,8 +209,7 @@ function initGalleryFilter() {
 // ==================== LOAD PROJECTS ====================
 async function loadProjects() {
     try {
-        const response = await fetch(`${API_URL}/projects`);
-        const projects = await response.json();
+        const projects = await fetchWithFallback('projects', '/data/projects.json');
         
         const grid = document.getElementById('projects-grid');
         grid.innerHTML = '';
@@ -253,8 +250,7 @@ async function loadProjects() {
 // ==================== LOAD SKILLS ====================
 async function loadSkills() {
     try {
-        const response = await fetch(`${API_URL}/skills`);
-        const skills = await response.json();
+        const skills = await fetchWithFallback('skills', '/data/skills.json');
         
         const grid = document.getElementById('skills-grid');
         grid.innerHTML = '';
@@ -290,8 +286,7 @@ async function loadSkills() {
 // ==================== LOAD EXPERIENCE ====================
 async function loadExperience() {
     try {
-        const response = await fetch(`${API_URL}/experience`);
-        const experiences = await response.json();
+        const experiences = await fetchWithFallback('experience', '/data/experience.json');
         
         const timeline = document.getElementById('experience-timeline');
         timeline.innerHTML = '';
@@ -317,8 +312,7 @@ async function loadExperience() {
 // ==================== LOAD EDUCATION ====================
 async function loadEducation() {
     try {
-        const response = await fetch(`${API_URL}/education`);
-        const educations = await response.json();
+        const educations = await fetchWithFallback('education', '/data/education.json');
         
         const grid = document.getElementById('education-grid');
         grid.innerHTML = '';
@@ -344,8 +338,7 @@ async function loadEducation() {
 // ==================== LOAD AWARDS ====================
 async function loadAwards() {
     try {
-        const response = await fetch(`${API_URL}/awards`);
-        const awards = await response.json();
+        const awards = await fetchWithFallback('awards', '/data/awards.json');
         
         const grid = document.getElementById('awards-grid');
         grid.innerHTML = '';
@@ -408,8 +401,18 @@ async function loadLinks() {
 // ==================== STORY DETAIL MODAL ====================
 async function openStoryDetail(id) {
     try {
-        const response = await fetch(`${API_URL}/stories/${id}`);
-        const story = await response.json();
+        // Try API route, fallback to local stories.json then find by id
+        let story;
+        try {
+            const res = await fetch(`${API_URL}/stories/${id}`);
+            if (res.ok) {
+                story = await res.json();
+            }
+        } catch {}
+        if (!story) {
+            const stories = await fetchWithFallback('stories', '/data/stories.json');
+            story = stories.find(s => String(s.id) === String(id)) || stories[0];
+        }
         
         const imagesHTML = story.images && story.images.length > 0
             ? `<div class="story-images-full">
