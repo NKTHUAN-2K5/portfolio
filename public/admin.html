@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Portfolio</title>
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Login Screen -->
+    <div id="login-screen">
+        <div class="login-container">
+            <h1><i class="fas fa-lock"></i> Đăng nhập</h1>
+            
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="username">Tên đăng nhập</label>
+                    <input type="text" id="username" required placeholder="Nhập tên đăng nhập">
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Mật khẩu</label>
+                    <input type="password" id="password" required placeholder="Nhập mật khẩu">
+                </div>
+                
+                <button type="submit" class="btn-login">Đăng nhập</button>
+            </form>
+            
+            <div class="login-hint">
+                <p><strong>Demo:</strong> admin / admin123</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin Dashboard -->
+    <div id="admin-dashboard" style="display: none;">
+        <!-- Sidebar Navigation -->
+        <aside class="admin-sidebar">
+            <div class="sidebar-header">
+                <h2><i class="fas fa-cog"></i> Admin</h2>
+                <button class="btn-logout" onclick="logout()">
+                    <i class="fas fa-sign-out-alt"></i> Đăng xuất
+                </button>
+            </div>
+            
+            <nav class="admin-nav">
+                <a href="#" class="nav-item active" data-tab="profile">
+                    <i class="fas fa-user"></i> Hồ sơ
+                </a>
+                <a href="#" class="nav-item" data-tab="skills">
+                    <i class="fas fa-star"></i> Kỹ năng
+                </a>
+                <a href="#" class="nav-item" data-tab="experience">
+                    <i class="fas fa-briefcase"></i> Kinh nghiệm
+                </a>
+                <a href="#" class="nav-item" data-tab="education">
+                    <i class="fas fa-graduation-cap"></i> Học vấn
+                </a>
+                <a href="#" class="nav-item" data-tab="projects">
+                    <i class="fas fa-code"></i> Dự án
+                </a>
+                <a href="#" class="nav-item" data-tab="awards">
+                    <i class="fas fa-trophy"></i> Giải thưởng
+                </a>
+                <a href="#" class="nav-item" data-tab="stories">
+                    <i class="fas fa-book"></i> Câu chuyện
+                </a>
+                <a href="#" class="nav-item" data-tab="gallery">
+                    <i class="fas fa-images"></i> Ảnh hoạt động
+                </a>
+                <a href="#" class="nav-item" data-tab="links">
+                    <i class="fas fa-link"></i> Liên kết
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="admin-content">
+            <div class="content-header">
+                <h1>Quản lý Portfolio</h1>
+            </div>
+
+            <!-- Profile Tab -->
+            <section id="tab-profile" class="tab-content active">
+                <div class="card">
+                    <h2>Thông tin hồ sơ</h2>
+                    <form id="profile-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="prof-name">Tên</label>
+                                <input type="text" id="prof-name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="prof-title">Chức danh</label>
+                                <input type="text" id="prof-title" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="prof-bio">Bio</label>
+                            <textarea id="prof-bio" rows="4" required></textarea>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="prof-email">Email</label>
+                                <input type="email" id="prof-email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="prof-phone">Điện thoại</label>
+                                <input type="tel" id="prof-phone" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="prof-location">Địa chỉ</label>
+                                <input type="text" id="prof-location" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="prof-github">GitHub</label>
+                                <input type="url" id="prof-github">
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn-save">
+                            <i class="fas fa-save"></i> Lưu
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Skills Tab -->
+            <section id="tab-skills" class="tab-content">
+                <div class="card">
+                    <h2>Quản lý kỹ năng</h2>
+                    <form id="skill-form" class="form-add">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="skill-name">Tên kỹ năng</label>
+                                <input type="text" id="skill-name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="skill-level">Mức độ (%)</label>
+                                <input type="number" id="skill-level" min="0" max="100" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="skill-category">Danh mục</label>
+                            <select id="skill-category" required>
+                                <option value="Programming">Lập trình</option>
+                                <option value="Frontend">Frontend</option>
+                                <option value="Backend">Backend</option>
+                                <option value="Database">Database</option>
+                                <option value="DevOps">DevOps</option>
+                                <option value="Soft Skills">Kỹ năng mềm</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn-add">
+                            <i class="fas fa-plus"></i> Thêm kỹ năng
+                        </button>
+                    </form>
+                    
+                    <div id="skills-list" class="items-list"></div>
+                </div>
+            </section>
+
+            <!-- Experience Tab -->
+            <section id="tab-experience" class="tab-content">
+                <div class="card">
+                    <h2>Quản lý kinh nghiệm</h2>
+                    <form id="experience-form" class="form-add">
+                        <div class="form-group">
+                            <label for="exp-company">Công ty</label>
+                            <input type="text" id="exp-company" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="exp-position">Vị trí</label>
+                                <input type="text" id="exp-position" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="exp-start">Từ năm</label>
+                                <input type="text" id="exp-start" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="exp-end">Đến năm</label>
+                                <input type="text" id="exp-end" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="exp-description">Mô tả công việc</label>
+                            <textarea id="exp-description" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-add">
+                            <i class="fas fa-plus"></i> Thêm kinh nghiệm
+                        </button>
+                    </form>
+                    
+                    <div id="experience-list" class="items-list"></div>
+                </div>
+            </section>
+
+            <!-- Education Tab -->
+            <section id="tab-education" class="tab-content">
+                <div class="card">
+                    <h2>Quản lý học vấn</h2>
+                    <form id="education-form" class="form-add">
+                        <div class="form-group">
+                            <label for="edu-school">Trường/Nơi đào tạo</label>
+                            <input type="text" id="edu-school" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="edu-degree">Bằng cấp</label>
+                                <input type="text" id="edu-degree" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="edu-major">Chuyên ngành</label>
+                                <input type="text" id="edu-major" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="edu-start">Từ năm</label>
+                                <input type="text" id="edu-start" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="edu-end">Đến năm</label>
+                                <input type="text" id="edu-end" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="edu-gpa">GPA</label>
+                            <input type="text" id="edu-gpa" placeholder="VD: 3.3/4.0">
+                        </div>
+                        <button type="submit" class="btn-add">
+                            <i class="fas fa-plus"></i> Thêm học vấn
+                        </button>
+                    </form>
+                    
+                    <div id="education-list" class="items-list"></div>
+                </div>
+            </section>
+
+            <!-- Projects Tab -->
+            <section id="tab-projects" class="tab-content">
+                <div class="card">
+                    <h2>Quản lý dự án</h2>
+                    <form id="project-form" class="form-add">
+                        <div class="form-group">
+                            <label for="proj-title">Tiêu đề</label>
+                            <input type="text" id="proj-title" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="proj-description">Mô tả</label>
+                            <textarea id="proj-description" rows="4" required></textarea>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="proj-tech">Công nghệ (ngăn cách bằng dấu phẩy)</label>
+                                <input type="text" id="proj-tech" placeholder="ReactJS, NodeJS, MongoDB">
+                            </div>
+                            <div class="form-group">
+                                <label for="proj-date">Ngày hoàn thành</label>
+                                <input type="text" id="proj-date">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="proj-image">Ảnh (URL)</label>
+                                <input type="url" id="proj-image">
+                            </div>
+                            <div class="form-group">
+                                <label for="proj-link">Liên kết dự án</label>
+                                <input type="url" id="proj-link">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn-add">
+                            <i class="fas fa-plus"></i> Thêm dự án
+                        </button>
+                    </form>
+                    
+                    <div id="projects-list" class="items-list"></div>
+                </div>
+            </section>
+
+            <!-- Awards Tab -->
+            <section id="tab-awards" class="tab-content">
+                <div class="card">
+                    <h2>Quản lý giải thưởng</h2>
+                    <form id="award-form" class="form-add">
+                        <div class="form-group">
+                            <label for="award-title">Tiêu đề giải thưởng</label>
+                            <input type="text" id="award-title" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="award-org">Tổ chức</label>
+                                <input type="text" id="award-org" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="award-date">Năm</label>
+                                <input type="text" id="award-date" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="award-description">Mô tả</label>
+                            <textarea id="award-description" rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-add">
+                            <i class="fas fa-plus"></i> Thêm giải thưởng
+                        </button>
+                    </form>
+                    
+                    <div id="awards-list" class="items-list"></div>
+                </div>
+            </section>
+
+            <!-- Stories Tab -->
+            <section id="tab-stories" class="tab-content">
+                <div class="card">
+                    <h2>Quản lý câu chuyện</h2>
+                    <form id="story-form" class="form-add">
+                        <div class="form-group">
+                            <label for="story-title">Tiêu đề</label>
+                            <input type="text" id="story-title" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="story-content">Nội dung</label>
+                            <textarea id="story-content" rows="4" required></textarea>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="story-date">Ngày (YYYY-MM-DD)</label>
+                                <input type="date" id="story-date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="story-category">Danh mục</label>
+                                <input type="text" id="story-category" placeholder="VD: Học tập, Dự án...">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="story-images">Upload ảnh</label>
+                            <input type="file" id="story-images" multiple accept="image/*">
+                            <div id="story-images-preview" style="margin-top: 1rem;"></div>
+                        </div>
+                        <button type="submit" class="btn-add">
+                            <i class="fas fa-plus"></i> Thêm câu chuyện
+                        </button>
+                    </form>
+                    
+                    <div id="stories-list" class="items-list"></div>
+                </div>
+            </section>
+
+            <!-- Gallery Tab -->
+            <section id="tab-gallery" class="tab-content">
+                <div class="card">
+                    <h2><i class="fas fa-images"></i> Quản lý ảnh hoạt động</h2>
+                    <form id="gallery-form" class="form-add">
+                        <input type="hidden" id="gallery-id" name="id">
+                        <input type="hidden" id="gallery-image-data" name="image">
+                        
+                        <div class="form-group">
+                            <label for="gallery-title">
+                                <i class="fas fa-heading"></i> Tiêu đề
+                            </label>
+                            <input type="text" id="gallery-title" name="title" placeholder="Nhập tiêu đề ảnh..." required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="gallery-description">
+                                <i class="fas fa-pen"></i> Mô tả
+                            </label>
+                            <textarea id="gallery-description" name="description" rows="3" placeholder="Nhập mô tả chi tiết..." required></textarea>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="gallery-category">
+                                    <i class="fas fa-folder"></i> Danh mục
+                                </label>
+                                <select id="gallery-category" name="category" required>
+                                    <option value="">Chọn danh mục...</option>
+                                    <option value="Sự kiện">Sự kiện</option>
+                                    <option value="Hoạt động">Hoạt động</option>
+                                    <option value="Công việc">Công việc</option>
+                                    <option value="Khác">Khác</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="gallery-date">
+                                    <i class="fas fa-calendar"></i> Ngày (YYYY-MM-DD)
+                                </label>
+                                <input type="date" id="gallery-date" name="date" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="gallery-image">
+                                <i class="fas fa-image"></i> Upload ảnh
+                            </label>
+                            <input type="file" id="gallery-image" name="gallery-image" accept="image/*" required>
+                            <div id="gallery-image-preview"></div>
+                        </div>
+                        
+                        <button type="submit" class="btn-add">
+                            <i class="fas fa-plus"></i> Thêm ảnh hoạt động
+                        </button>
+                    </form>
+                    
+                    <div id="gallery-list" class="items-list"></div>
+                </div>
+            </section>
+
+            <!-- Links Tab -->
+            <section id="tab-links" class="tab-content">
+                <div class="card">
+                    <h2>Quản lý liên kết</h2>
+                    <form id="link-form" class="form-add">
+                        <div class="form-group">
+                            <label for="link-title">Tiêu đề</label>
+                            <input type="text" id="link-title" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="link-type">Loại</label>
+                                <select id="link-type" required>
+                                    <option value="facebook">Facebook</option>
+                                    <option value="drive">Google Drive</option>
+                                    <option value="news">Báo chí</option>
+                                    <option value="other">Khác</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="link-url">URL</label>
+                                <input type="url" id="link-url" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn-add">
+                            <i class="fas fa-plus"></i> Thêm liên kết
+                        </button>
+                    </form>
+                    
+                    <div id="links-list" class="items-list"></div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>
