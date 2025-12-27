@@ -2,6 +2,13 @@
 
 Website portfolio cá nhân động với admin panel, hỗ trợ upload story, hình ảnh và quản lý nội dung hoàn chỉnh.
 
+## 🔗 Live Links
+- Portfolio (Vercel): https://portfolio-nkthuan3326.vercel.app
+- Dự phòng: https://portfolio-nkt26.vercel.app
+- Source GitHub: https://github.com/NKTHUAN-2K5/portfolio
+
+Triển khai dạng web tĩnh: dữ liệu đọc từ `public/data/*.json`, ảnh phục vụ từ `public/assets` (kèm bản tên chuẩn hóa trong `public/assets/normalized`).
+
 ## ✨ Tính năng
 
 ### 🌐 Trang Portfolio (Public)
