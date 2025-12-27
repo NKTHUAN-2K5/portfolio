@@ -165,8 +165,21 @@ function addGalleryItemToGrid(item) {
     const encodedSecondary = secondarySrc ? encodeURI(secondarySrc) : '';
     const imageSrc = encodedPrimary || primarySrc;
     const fallbackSrc = encodedSecondary || secondarySrc;
+
+    // Build normalized slug fallback: /assets/normalized/<slug>.ext
+    const extMatch = rawPath.match(/\.[a-zA-Z0-9]+$/);
+    const ext = (extMatch ? extMatch[0] : '.jpg').toLowerCase();
+    const baseName = rawPath.split('/').pop().replace(extMatch||'', '');
+    const slugBase = (baseName || (item.title || 'img'))
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/[^a-zA-Z0-9]+/g, '-')
+        .replace(/^-+|-+$/g, '')
+        .toLowerCase();
+    const normalizedPath = `/assets/normalized/${slugBase}${ext}`;
+
     const imageHTML = imageSrc
-        ? `<img src="${imageSrc}" alt="${item.title || 'Hoạt động'}" class="gallery-image" onclick="openLightbox('${imageSrc}')" onerror="if (this.dataset.retry!=='1'){ this.dataset.retry='1'; this.src='${fallbackSrc}'; } else { this.parentElement.style.background='var(--gradient)'; this.remove(); }">`
+        ? `<img src="${imageSrc}" alt="${item.title || 'Hoạt động'}" class="gallery-image" onclick="openLightbox('${imageSrc}')" onerror="const r=this.dataset.retry||'0'; if (r==='0'){ this.dataset.retry='1'; this.src='${fallbackSrc}'; } else if (r==='1'){ this.dataset.retry='2'; this.src='${normalizedPath}'; } else { this.parentElement.style.background='var(--gradient)'; this.remove(); }">`
         : '<div class="gallery-image" style="background: var(--gradient);"></div>';
 
     galleryItem.innerHTML = `
